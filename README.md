@@ -7,7 +7,7 @@ Spring Boot의 핵심 목표는 프로덕션 환경에서 사용 가능한 Appli
 ### 🔗 [Spring initializr](http://start.spring.io)
 프로젝트를 신속하게 생성해주는 도구.
 
-### 🔗 [Spring Boot Starter Projects](#spring-boot-starter-projects)
+### 🔗 [Spring Boot Starter Projects](#-spring-boot-starter-projects)
 프로젝트의 의존성을 신속하게 정의할 수 있게 돕는 도구.
 
 ### 🔗 [Spring Boot Auto Configuration](#spring-boot-auto-configuration)
@@ -23,7 +23,7 @@ Spring Boot의 핵심 목표는 프로덕션 환경에서 사용 가능한 Appli
 
 * 📝 **Logging** - 작동 상태의 기록과 보존을 위한 환경
 * 🌐 **다양한 설정과 환경** - QA환경, DEV환경, Stage, prod 등 다양한 환경 구축
-* 🖥️ **Monitoring** - Application이 동작하는 환경을 모니터링 해야합니다. (메모리, 측정 등)
+* 🖥️ **Monitoring** - Application이 동작하는 환경을 모니터링 해야한다. (메모리, 측정 등)
 
 Spring Boot는 이런 환경을 빠르게 구축할 수 있도록 다양한 기능을 제공하고 있다.
 

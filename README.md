@@ -6,11 +6,10 @@ Spring Boot의 핵심 목표는 프로덕션 환경에서 사용 가능한 Appli
 ## 🚀 Spring Boot의 빠른 빌드를 도와주는 도구
 ### 🔗 [Spring initializr](http://start.spring.io)
 프로젝트를 신속하게 생성해주는 도구.
-
 ### 🔗 [Spring Boot Starter Projects](#-spring-boot-starter-projects)
 프로젝트의 의존성을 신속하게 정의할 수 있게 돕는 도구.
 
-### 🔗 [Spring Boot Auto Configuration](#-spring-boot-auto-configuration)
+### 🔗 [Spring Boot Auto Configurations](#-spring-boot-auto-configurations)
 클래스 경로에 있는 의존성에 따라 자동 설정을 제공하는 도구.
 
 ### 🔗 [Spring Boot DevTools](#spring-boot-devtools)
@@ -68,9 +67,31 @@ Bean을 JSON으로, JSON을 Bean으로 변환하는 설정이 필요하다.
 
 `src/main/resources/application.properties`에 `logging.level.org.springframework=debug`를 추가하고
 
-프로젝트를 실행해보면, 평소보다 많은 양의 정보가 서버로그에 출력된다.
+프로젝트를 실행해보면, 평소보다 많은 양의 정보가 서버로그에 출력된다.<br>
+로그들을 확인해보면 서버가 실행될 때 자동으로 설정되는 것들을 확인할 수 있다.
 
-이를 통해 **Auto Configuration**이 어떤 설정들을 자동으로 해주는지 확인할 수 있다.
+> 🎯 **Auto Configuration**<br>
+> Auto Configurations는 개발자가 하나씩 설정해주어야 하는 것들을<br> 자동으로 설정해준다.
 
 ![서버 로그](docs/log.png)
 ## Spring Boot DevTools
+*DevTools는 개발자의 생산성을 높여주기 위한 도구로써*<br>
+*코드에 변경사항이 생길 때 자동으로 서버를 재시작해준다.*
+### 🔹 적용 방법
+먼저 `build.gradlew`에 다음을 추가해준다.
+```markdown
+developmentOnly 'org.springframework.boot:spring-boot-devtools'
+```
+![gradlew 추가](docs/gradlew.png)
+
+그 다음 IntelliJ의 설정 - 빌드 - 컴파일러에서 다음 옵션을 체크해준다.
+
+![자동 빌드 설정](docs/settingAutoBuild.png)
+
+설정 - 고급 설정 - 컴파일러에서 다음 옵션을 체크해준다.
+![자동 빌드 설정2](docs/settingAutoRemake.png)
+
+그 다음 코드가 서버를 재시작 하지 않아도 자동으로 적용되는지 확인한다.
+
+> 🎯 **Spring Boot DevTools**  
+> DevTools는 개발자의 생산성을 높이는데 도움을 준다.

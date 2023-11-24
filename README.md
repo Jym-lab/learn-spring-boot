@@ -1,4 +1,4 @@
-# 🌼 Spring Boot
+__# 🌼 Spring Boot
 ## 🚩Spring Boot의 목표
 ```
 Spring Boot의 핵심 목표는 프로덕션 환경에서 사용 가능한 Application을 빠르게 빌드하는 것.
@@ -10,7 +10,7 @@ Spring Boot의 핵심 목표는 프로덕션 환경에서 사용 가능한 Appli
 ### 🔗 [Spring Boot Starter Projects](#-spring-boot-starter-projects)
 프로젝트의 의존성을 신속하게 정의할 수 있게 돕는 도구.
 
-### 🔗 [Spring Boot Auto Configuration](#spring-boot-auto-configuration)
+### 🔗 [Spring Boot Auto Configuration](#-spring-boot-auto-configuration)
 클래스 경로에 있는 의존성에 따라 자동 설정을 제공하는 도구.
 
 ### 🔗 [Spring Boot DevTools](#spring-boot-devtools)
@@ -31,13 +31,13 @@ Spring Boot는 이런 환경을 빠르게 구축할 수 있도록 다양한 기�
 
 *Application을 구축할 때 다양한 프레임워크가 필요하다.*
 
-🔹 **RestAPI를 만들려면**   
+### 🔹 **RestAPI를 만들려면**   
 단순한 RestAPI를 만들기 위해선 **Spring**과 **SpringMVC 프레임워크**가 필수적이다.
 
-🔹 **서버 운영**   
+### 🔹 **서버 운영**   
 서버를 운영하기 위해서는 **Tomcat**과 **Json 변환 기능**이 필요하다.
 
-🔹 **테스트 코드 작성**   
+### 🔹 **테스트 코드 작성**   
 테스트 코드 작성을 위해 **Spring Test 프레임워크**와 **Junit** 등이 추가된다.
 
 이런 다양한 프레임워크들을 효율적으로 그룹화하고, 간편하게 빌드할 수 있는 방법이 필요하다.
@@ -47,6 +47,30 @@ Spring Boot는 이런 환경을 빠르게 구축할 수 있도록 다양한 기�
 > 🎯 **Spring Boot Starter Projects**   
 > 이것이 바로 스프링 부트 스타터 프로젝트가 제공하는 핵심 기능이다.
 ![스타터 프로젝트 사진](docs/starterProjects.png)
-## Spring Boot Auto Configuration
+## 🛠️ Spring Boot Auto Configuration
+*스프링 부트로 Application을 빌드하려면 많은 설정이 필요하다.*
 
+몇가지 예시를 들자면
+### 🔹 Component-scan
+Spring Boot는 Spring과 마찬가지로 **Component-scan**을 통해 **component**들을 찾아 **Bean**을 생성한다.
+
+Bean - 스프링 컨테이너에서 관리하는 객체
+### 🔹 **데이터소스 설정**
+DB를 사용하려면 데이터소스를 설정해서 연결해주어야 한다.
+### 🔹 **JSON 변환**
+Bean을 JSON으로, JSON을 Bean으로 변환하는 설정이 필요하다.
+
+이런 작업들을 모두 수동으로 해주기에는 개발자는 바쁘다.
+
+그래서 Spring Boot에서는 이런 설정들을 자동으로 해주는 **Auto Configuration** 기능을 제공한다.
+
+![자동 설정 클래스들](docs/autoconfigclass.png)
+
+`src/main/resources/application.properties`에 `logging.level.org.springframework=debug`를 추가하고
+
+프로젝트를 실행해보면, 평소보다 많은 양의 정보가 서버로그에 출력된다.
+
+이를 통해 **Auto Configuration**이 어떤 설정들을 자동으로 해주는지 확인할 수 있다.
+
+![서버 로그](docs/log.png)
 ## Spring Boot DevTools

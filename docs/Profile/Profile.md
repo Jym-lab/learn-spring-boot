@@ -19,3 +19,25 @@ Dev 환경, QA 환경, Prod 환경 등등 여러 개의 환경들이 존재한�
 같은 코드에서 다른 DB들과 통신하거나 다른 웹 서비스도 호출할 수 있다.
 
 이것을 우리는 ***프로필***이라고 한다
+
+`src/main/resources`의 **application.properties**를 복사해보자.
+
+그리고 각각 환경에 맞게 -dev, -prod를 추가해주면<br>
+![환경 추가](img/addProfile.png)
+
+각 프로파일이 추가된다.
+
+각 환경 별로 로그를 다르게 할 수 있도록 설정을 변경해보자
+```yaml
+logging.level.org.springframework=trace
+logging.level.org.springframework=info
+```
+prod환경엔 info를, dev환경에 trace를 각각 입력해 저장해준 뒤
+
+application.properties를 다음처럼 수정해준다.
+```
+spring.profiles.active=prod
+```
+그리고 dev로도 변경해보면서 서버를 실행시켜보자!
+
+다른 서버 로그가 기록될 것이다!

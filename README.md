@@ -1,4 +1,4 @@
-__# 🌼 Spring Boot
+# 🌼 Spring Boot
 ## 🚩Spring Boot의 목표
 ```
 Spring Boot의 핵심 목표는 프로덕션 환경에서 사용 가능한 Application을 빠르게 빌드하는 것.

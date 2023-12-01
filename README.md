@@ -3,3 +3,4 @@
 ## 📒 SpringBoot 시작하기
 - [Spring Boot의 구성과 목표](https://github.com/Jym-lab/learn-spring-boot/tree/main/docs/SpringBootStart/SpringBootStart.md) <br>
 - [Spring Boot 프로덕션 환경 배포 준비하기 1편](https://github.com/Jym-lab/learn-spring-boot/tree/main/docs/Profile/Profile.md)
+- [Spring Boot 프로덕션 환경 배포 준비하기 2편](https://github.com/Jym-lab/learn-spring-boot/tree/main/docs/Embedded/embedded.md)

@@ -9,7 +9,7 @@
 
 이번에는 환경 별로 프로필을 만들고, 이를 다루는 법에 대해 알아보자. 🧑‍💻
 
-## 프로필을 사용하여 설정 관리하기
+## 🛠️ 프로필을 사용하여 설정 관리하기
 하나의 어플리케이션에는 다양한 환경이 있어야한다.
 
 ![환경 설정](img/environment.png)
@@ -22,10 +22,10 @@ Dev 환경, QA 환경, Prod 환경 등등 여러 개의 환경들이 존재한�
 
 `src/main/resources`의 **application.properties**를 복사해보자.
 
-그리고 각각 환경에 맞게 -dev, -prod를 추가해주면<br>
+그리고 각각 환경에 맞게 -dev, -prod를 추가해보자<br>
 ![환경 추가](img/addProfile.png)
 
-각 프로파일이 추가된다.
+이렇게 하면 프로파일이 추가된다.
 
 각 환경 별로 로그를 다르게 할 수 있도록 설정을 변경해보자
 ```yaml
@@ -42,7 +42,7 @@ spring.profiles.active=prod
 그리고 dev로도 변경해보면서 서버를 실행시켜보자!
 
 다른 서버 로그가 기록될 것이다!
-## 애플리케이션에 복잡한 설정 지정하기
+## 🧩 애플리케이션에 복잡한 설정 지정하기
 이번엔 우리가 어떤 DB와 통신하고 있고, DB 여러 설정 값들을 지정한다고 가정해보자.
 
 `current-service.url`, `current-service.username`, `current-service.password`
@@ -51,7 +51,7 @@ spring.profiles.active=prod
 
 이때 우리가 여러가지 DB와 통신하려고 할 때마다 수정해주어야 한다.
 
-### Configuration 프로퍼티
+### 📝 Configuration 프로퍼티
 Configuration 프로퍼티를 만들어서 이용할 수 있다.
 
 Configuration 클래스를 만들어보자

@@ -49,6 +49,7 @@ java -jar build/libs/{프로젝트명}-0.0.1-SNAPSHOT.jar
 프로젝트에 jar 파일 내부에 tomcat 서버가 자동으로 실행 되는 것을 볼 수 있다.
 
 ![dependencies](img/dependencies.png)
+
 이는 build.gradle의 spring-boot-starter-web이 프로젝트 빌드 의존성으로 추가되었고,
 
 starter-web은 tomcat을 내장하고 있기 때문에 가능한 것이다.

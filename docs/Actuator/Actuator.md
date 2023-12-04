@@ -60,7 +60,7 @@ Actuator에 내장된 MicroMeter 모듈이 메트릭 수집을 담당하고 있�
 
 애플리케이션의 상태는 현재 'UP'이라고 표시되는데 실행 중임을 뜻한다.
 
-<p style="font-size:18px; font-weight:bold; color:#617DF8;"> 🤔 근데 위에서 설명한 것들은 다 어딨어요? </p>
+### 🤔 근데 위에서 설명한 것들은 다 어딨어요?
 기본 적으로 Actuator는 health 엔드포인트만 노출한다.
 
 위에서 설명한 것처럼 더 많은 기능을 사용하려면
@@ -81,7 +81,7 @@ management.endpoints.web.exposure.include=*
 
 여기에 표시된 모두를 알 필요는 없고, 중요한 몇 가지만 알면 된다.
 
-<p style="font-size:16px; font-weight:bold">1️⃣. Beans</p>
+#### 1️⃣. Beans<
 
 ![beans](img/beans.png)
 
@@ -93,7 +93,7 @@ management.endpoints.web.exposure.include=*
 
 [localhost:8080/actuator/beans](http://localhost:8080/actuator/beans)
 
-<p style="font-size:16px; font-weight:bold">2️⃣. configprops</p>
+#### 2️⃣. configprops
 
 열어보면 application.properties에서 설정할 수 있는 모든 항목이 표시된다.
 
@@ -106,7 +106,7 @@ management.endpoints.web.exposure.include=*
 
 [localhost:8080/actuator/configprops](http://localhost:8080/actuator/configprops)
 
-<p style="font-size:16px; font-weight:bold">3️⃣. env</p>
+#### 3️⃣. env
 
 env 엔드포인트는 환경에 관한 세부 사항을 모두 표시한다.
 
@@ -119,7 +119,7 @@ env 엔드포인트는 환경에 관한 세부 사항을 모두 표시한다.
 
 [localhost:8080/actuator/env](http://localhost:8080/actuator/env)
 
-<p style="font-size:16px; font-weight:bold">4️⃣. metrics</p>
+#### 4️⃣. metrics
 
 마지막으로 살펴볼 건 metrics
 

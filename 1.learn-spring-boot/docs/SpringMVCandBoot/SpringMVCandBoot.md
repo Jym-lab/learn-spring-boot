@@ -61,4 +61,4 @@ build.gradle에 라이브러리들을 명시하거나 다양한 설정을 추가
 
 Spring Boot는 이러한 복잡성을 줄여주고, 애플리케이션을 빠르게 빌드 할 수 있도록 지원한다.
 
-좀 더 자세한 내용은 [Spring Boot의 구성과 목표](https://github.com/Jym-lab/learn-spring-boot/tree/main/docs/SpringBootStart/SpringBootStart.md)를 참고하길 바란다. 👀
+좀 더 자세한 내용은 [Spring Boot의 구성과 목표](https://github.com/Jym-lab/learn-spring-boot/tree/main/1.learn-spring-boot/docs/SpringBootStart/SpringBootStart.md)를 참고하길 바란다. 👀

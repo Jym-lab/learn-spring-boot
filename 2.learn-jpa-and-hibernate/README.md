@@ -7,3 +7,8 @@
 ![프로젝트 생성](img/GenerateProject.png)
 
 Dependencies에 Spring Web, JDBC, JPA, H2 Database를 추가해준다.
+
+build.gradle에서 다음과 같이 종속성이 잘 지정되었는지 확인한다.
+![build](img/build.png)
+
+여유가 난다면 devtools를 추가해보자.

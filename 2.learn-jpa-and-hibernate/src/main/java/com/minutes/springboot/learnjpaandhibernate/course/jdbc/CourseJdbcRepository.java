@@ -13,7 +13,7 @@ public class CourseJdbcRepository {
     private static String INSERT_QUERY =
             """
                 insert into course (id, name, author)
-                values (?, ?, ?');
+                values (?, ?, ?);
             """;
 
     public void insert(Course course) {

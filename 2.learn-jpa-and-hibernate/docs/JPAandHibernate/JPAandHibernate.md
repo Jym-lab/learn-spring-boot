@@ -1,11 +1,11 @@
-# JPA와 Hibernate
+# 📚 JPA와 Hibernate
 
 ## 무엇을 하는가?
 옛날 개발자 선배님들이 쓰시던 H2 데이터베이스를 설치하여 사용해볼 것이다.
 
 그렇게 JPA 이전에 사용하던 세계를 먼저 이해한 뒤,
 
-왜 JPA를 써야하는지, 그리고 JPA와 Hibernate의 차이가 무엇인지 알아보자.
+JPA의 필요성과 JPA와 Hibernate의 차이를 파악해보자.
 
 ***application.properties***에 다음을 추가한다
 ```properties
@@ -189,3 +189,114 @@ CommandLineRunner를 implements 해주면
 이제 H2 콘솔에 연결해서 잘 작동하는지 보자.
 
 데이터가 삽입된 것을 확인하면 된다.
+
+## Spring JDBC로 데이터 삽입 및 삭제하기
+
+위에서는 하드코딩을 통해 특정 SQL문을 실행하여 데이터를 삽입 하였다.
+
+이번에는 SQL문에 다양한 데이터를 넣어서 실행해보자
+
+## courese.java
+
+```java
+package com.minutes.springboot.learnjpaandhibernate.course;
+
+public class Course {
+    private long id;
+    private String name;
+    private String author;
+
+    public Course(long id, String name, String author) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.author = author;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+}
+```
+Course 객체에 생성자와 getter와 setter를 추가해준다.
+
+### CourseJdbcRepository.java
+```java
+private static String INSERT_QUERY =
+            """
+                insert into course (id, name, author)
+                values (?, ?, ?);
+            """;
+```
+repository에 values를 다음과 같이 변경해준다.
+
+마지막으로 CommandLineRunner에 생성자를 통해 객체를 생성해주면
+
+### CourseJdbcCommandLineRunner.java
+```java
+package com.minutes.springboot.learnjpaandhibernate.course.jdbc;
+
+import com.minutes.springboot.learnjpaandhibernate.course.Course;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class CourseJdbcCommandLineRunner implements CommandLineRunner {
+    @Autowired
+    private CourseJdbcRepository repository;
+    @Override
+    public void run(String... args) throws Exception {
+        repository.insert(new Course(1, "Learn AWS Now!", "in28minutes"));
+        repository.insert((new Course(2, "Learn Azure Now!", "in28minutes")));
+        repository.insert((new Course(3, "Learn DevOps Now!", "in28minutes")));
+    }
+}
+```
+다음과 같은 결과가 나오게 된다.
+
+![result](img/result.png)
+
+이번에는 데이터를 삭제하는 것과 조회하는 것을 구현해보자.
+
+쿼리문에 delete와 select를 추가하고, 메서드를 구현하면 된다.
+
+![img.png](img/delete.png)
+
+delete의 경우 쿼리와 메서드를 조금만 수정해서 구현하면 되니 코드는 생략한다.
+
+1번 데이터를 삭제한 모습.
+
+조회의 경우 jdbcTemplate의 queryForObject라는 메서드를 사용해야 한다.
+### CourseJdbcRepository
+```java
+    public Course findById(long id) {
+        return springJdbcTemplate.queryForObject(SELECT_QUERY,
+                new BeanPropertyRowMapper<>(Course.class), id);
+    }
+```
+마지막으로 System.out을 사용해 쿼리 실행 결과를 프린트해주면 다음과 같다.
+
+![select](img/select.png)
+
+다음 시간엔 JPA와 EntityManager를 사용해보자 🚀

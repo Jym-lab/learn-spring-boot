@@ -13,4 +13,12 @@ public class CourseJpaRepository {
     public void insert(Course course){
         entityManager.merge(course);
     }
+
+    public Course findById(long id){
+        return entityManager.find(Course.class, id);
+    }
+
+    public void deleteById(long id){
+        entityManager.remove(id);
+    }
 }

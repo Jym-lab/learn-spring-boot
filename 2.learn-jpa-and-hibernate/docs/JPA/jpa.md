@@ -171,11 +171,3 @@ public class CourseJpaRepository {
 >```
 >다음 구문을 추가하면 실행된 sql 쿼리를 확인할 수 있다.
 > ![03](img/03.png)
-
-## JPA 살펴보기
-
-## Spring Data JPA 시작하기
-
-## Spring Data JPA 특징 살펴보기
-
-## Hibernate와 JPA 차이 이해하기

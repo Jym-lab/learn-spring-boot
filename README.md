@@ -10,3 +10,4 @@
 ## 📚 JPA와 Hibernate 시작하기
 * [JPA와 Hibernate를 포함한 프로젝트 생성하기](https://github.com/Jym-lab/learn-spring-boot/tree/main/2.learn-jpa-and-hibernate/README.md)
 * [JPA와 Hibernate 그리고 JDBC](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/JPAandHibernate/JPAandHibernate.md)
+* [JPA와 Entity Manager 시작하기](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/JPA/jpa.md)

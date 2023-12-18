@@ -8,7 +8,11 @@
 
 
 ## 📚 JPA와 Hibernate 시작하기
-* [JPA와 Hibernate를 포함한 프로젝트 생성하기](https://github.com/Jym-lab/learn-spring-boot/tree/main/2.learn-jpa-and-hibernate/README.md)
-* [JPA와 Hibernate 그리고 JDBC](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/JPAandHibernate/JPAandHibernate.md)
-* [JPA와 Entity Manager 시작하기](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/JPA/jpa.md)
-* [Spring Data JPA](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/DataJpa/DataJPA.md)
+* [📜 JPA와 Hibernate를 포함한 프로젝트 생성하기](https://github.com/Jym-lab/learn-spring-boot/tree/main/2.learn-jpa-and-hibernate/README.md)
+* [🔍 JPA와 Hibernate 그리고 JDBC](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/JPAandHibernate/JPAandHibernate.md)
+* [🖥️ JPA와 Entity Manager 시작하기](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/JPA/jpa.md)
+* [⚡ Spring Data JPA](https://github.com/Jym-lab/learn-spring-boot/blob/main/2.learn-jpa-and-hibernate/docs/DataJpa/DataJPA.md)
+
+## 🧩 Spring MVC로 Todo 웹 애플리케이션 만들기
+
+* [📜 목차 및 프로젝트 생성하기](https://github.com/Jym-lab/learn-spring-boot/tree/main/3.mytodowebapp/README.md)

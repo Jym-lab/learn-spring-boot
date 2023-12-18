@@ -26,6 +26,13 @@ public class CourseCommandLineRunner implements CommandLineRunner {
         repository.deleteById(1L);
         System.out.println(repository.findById(2L));
         System.out.println(repository.findById(3L));
-        repository.
+        System.out.println("----------------------------------------------------------");
+        System.out.println(repository.findAll());
+        System.out.println("----------------------------------------------------------");
+        System.out.println(repository.count());
+        System.out.println("----------------------------------------------------------");
+        System.out.println(repository.findByAuthor("in28minutes"));
+        System.out.println(repository.findByName("Learn Azure Now!"));
+        System.out.println(repository.findByName("Learn DevOps Now!"));
     }
 }

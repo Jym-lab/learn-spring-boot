@@ -143,6 +143,31 @@ IntelliJ를 사용하면 이렇게 간단하게 파일 추가가 가능하다.
 </html>
 ```
 
+이제 자바 어플리케이션에서 해당 JSP 파일 경로를 찾을 수 있도록 도와주어야 한다.
+
+application.properties에서 해당 값들을 설정할 수 있다.
+
+```properties
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+```
+
+prefix는 접두사라는 뜻으로 파일 경로의 앞쪽에 붙는다.
+
+Spring MVC에선 META-INF/resources 경로를 이미 인지하고 있으므로 /WEB-INF/jsp/만 적어주면 된다.
+
+suffix는 접미사라는 뜻으로 뒤쪽에 붙는 것을 말한다.
+
+.jsp를 접미사로 세팅해주고, /WEB-INF/jsp/를 접두사로 세팅해주면
+
+메서드의 리턴 값이 ***resources/META-INF/resources/WEB-INF/jsp/[리턴 값].jsp***으로 최종적으로 변하게 된다.
+
+그럼 해당 JSP파일을 찾아 사용자에게 로드해주는 과정을 거치게 된다.
+
+그 결과 값을 확인하고 싶다면 `logging.level.org.springframework=debug`
+
+logging 레벨을 debug로 올려보자.
+
 그리고 URL매핑을 다음과 같이 해주면
 
 ### SayHelloController.java
@@ -152,6 +177,8 @@ IntelliJ를 사용하면 이렇게 간단하게 파일 추가가 가능하다.
         return "sayHello";
     }
 ```
+
+
 
 ![06](img/06.png)
 

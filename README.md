@@ -16,3 +16,5 @@
 ## 🧩 Spring MVC로 Todo 웹 애플리케이션 만들기
 
 * [📜 목차 및 프로젝트 생성하기](https://github.com/Jym-lab/learn-spring-boot/tree/main/3.mytodowebapp/README.md)
+* [Chapter1. ResponseBody와 JSP 페이지 응답받기](https://github.com/Jym-lab/learn-spring-boot/blob/main/3.mytodowebapp/docs/Chapter1/Chapter1.md)
+* [Chapter2. 쿼리 파라미터와 모델 그리고 로깅](https://github.com/Jym-lab/learn-spring-boot/blob/main/3.mytodowebapp/docs/Chapter2/Chapter2.md)

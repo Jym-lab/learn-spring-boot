@@ -113,10 +113,48 @@ build.gradle에 다음 종속성을 추가해주자.
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // 여기 아래에 추가할 것!
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 ```
 
-JSP를 사용하는 건 다음에 자세히 다뤄보자
+이제 JSP를 사용할 준비가 끝났다.
+
+JSP 파일을 생성해서 View를 호출해 화면을 출력해보자.
+
+먼저 main/resourse에 JSP파일을 만들 경로를 추가해주자
+
+![05](img/05.png)
+
+IntelliJ를 사용하면 이렇게 간단하게 파일 추가가 가능하다.
+
+그리고 sayHello.jsp에는 html코드를 그대로 입력해주면 된다.
+
+### sayHello.jsp
+```jsp
+<html>
+    <head>
+        <title>My First HTML Page - JSP</title>
+    </head>
+    <body>
+        My First html page with body - JSP
+    </body>
+</html>
+```
+
+그리고 URL매핑을 다음과 같이 해주면
+
+### SayHelloController.java
+```java
+    @RequestMapping("say-hello-jsp")
+    public String sayHelloJsp(){
+        return "sayHello";
+    }
+```
+
+![06](img/06.png)
+
+페이지를 깔끔하게 띄울 수 있다.
+
+다음 번엔 로그인 페이지를 한번 구현해보자.

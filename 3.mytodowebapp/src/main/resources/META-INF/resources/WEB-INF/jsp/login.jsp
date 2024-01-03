@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>Login Page</title>
     </head>
     <body>
         <div class="container">
